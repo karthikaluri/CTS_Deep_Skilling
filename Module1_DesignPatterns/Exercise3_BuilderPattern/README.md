@@ -36,26 +36,5 @@ Person with minimal fields:
   Age: Not provided
   Email: Not provided
 ```
-
-## Acceptance Criteria
-- [ ] Can build Person with minimal required fields
-- [ ] Can build Person with all optional fields
-- [ ] Throws IllegalStateException if name is not provided
-- [ ] Method chaining works correctly
-- [ ] All test cases pass without errors
-
-## Implementation Notes
-- Use private constructor for Person
-- Static inner class or separate builder class
-- Implement toString() for display
-- Validation in build() method
-
-## Testing Strategy
-1. Happy path: Build complete person
-2. Minimal path: Build with only required fields
-3. Error path: Attempt build without required field
-4. Edge cases: Empty strings, special characters
-
----
 **Created**: 2026-06-17  
 **Status**: Template Ready for Implementation

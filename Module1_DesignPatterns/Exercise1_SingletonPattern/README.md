@@ -15,10 +15,9 @@ Implement the Singleton Pattern to create a Logger class that maintains a single
 - `SingletonTest.java` - Unit tests for singleton verification
 
 ## Expected Output
-[Describe expected behavior]
+Implement a static method to get singleton instance.
 
 ## Notes
-- [Add implementation notes]
 - Thread safety is important for production code
 - Consider lazy initialization vs eager initialization
 

@@ -32,30 +32,7 @@ Root (Folder)
     └── File4.pdf (4 KB)
 
 Total Size: 10 KB
-```
 
-## Acceptance Criteria
-- [ ] Can add files to folder
-- [ ] Can add folders to folder (nesting)
-- [ ] Display shows correct hierarchy
-- [ ] getSize() returns correct total
-- [ ] Leaf (File) and Composite (Folder) treated uniformly
-- [ ] Can remove components
-- [ ] Recursive operations work correctly
-
-## Implementation Notes
-- Use List<FileSystemComponent> for children in Folder
-- Implement indentation for display
-- Use recursive calls for tree traversal
-- Proper null checks and error handling
-
-## Testing Strategy
-1. Create nested folder structure
-2. Add files at various levels
-3. Display entire tree
-4. Verify size calculations
-5. Test add/remove operations
-6. Edge cases: Empty folders, single files
 
 ---
 **Created**: 2026-06-17  
