@@ -1,0 +1,13 @@
+﻿=== Builder Pattern Test ===
+
+Test 1: Person with all fields
+Person {name='John Doe', age=30, email='john@example.com', phone='555-1234', address='123 Main St'}
+
+Test 2: Person with minimal fields
+Person {name='Jane Smith', age=25, email='', phone='', address=''}
+
+Test 3: Person with some optional fields
+Person {name='Bob Johnson', age=0, email='bob@example.com', phone='555-5678', address=''}
+
+Test 4: Error handling - Missing required field
+Error caught: Name is required!

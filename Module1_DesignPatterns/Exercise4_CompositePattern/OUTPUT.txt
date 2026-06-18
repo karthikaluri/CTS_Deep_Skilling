@@ -1,0 +1,17 @@
+﻿=== Composite Pattern Test ===
+
+File System Structure:
+Root/
+  ??? File1.txt (1 KB)
+  ??? Readme.md (2 KB)
+  SubFolder1/
+    ??? File2.txt (2 KB)
+    ??? File3.doc (3 KB)
+  SubFolder2/
+    ??? File4.pdf (4 KB)
+    NestedFolder/
+      ??? File5.xlsx (1 KB)
+
+Total Size: 13 KB
+SubFolder1 Size: 5 KB
+SubFolder2 Size: 5 KB
