@@ -41,16 +41,17 @@
 
 ## Module 2: Data Structures and Algorithms
 
-### Progress: 0% (Not Started)
+### Progress: 20% (Started)
 
 | # | Exercise/Topic | Status | Completion Date | Evidence |
 |---|---|---|---|---|
-| 1 | Arrays & Array Operations | ⏳ PENDING | 2026-06-20 | - |
-| 2 | Linked Lists | ⏳ PENDING | 2026-06-20 | - |
-| 3 | Sorting Algorithms | ⏳ PENDING | 2026-06-21 | - |
-| 4 | Searching Algorithms | ⏳ PENDING | 2026-06-21 | - |
-| - | Time Complexity Analysis | ⏳ PENDING | 2026-06-21 | - |
-| - | Module 2 Quiz | ⏳ PENDING | 2026-06-22 | - |
+| 1 | Inventory Management System | ✅ COMPLETE | 2026-06-17 | InventoryManager.java + Test |
+| 2 | E-commerce Platform Search | ✅ COMPLETE | 2026-06-23 | Product.java, SearchEngine.java, SearchTest.java, OUTPUT.txt |
+| 3 | (To be assigned) | ⏳ PENDING | TBD | - |
+| 7 | Financial Forecasting | ✅ COMPLETE | 2026-06-23 | FinancialData.java, Forecaster.java, ForecastingTest.java, OUTPUT.txt |
+| - | Time Complexity Analysis | ✅ IN PROGRESS | 2026-06-23 | Exercise 2 demonstrates Big O notation |
+| - | Recursive Algorithms | ✅ IN PROGRESS | 2026-06-23 | Exercise 7 demonstrates recursion patterns |
+| - | Module 2 Quiz | ⏳ PENDING | 2026-06-25 | - |
 
 ---
 

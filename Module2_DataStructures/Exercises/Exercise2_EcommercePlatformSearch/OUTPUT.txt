@@ -1,0 +1,86 @@
+=== E-COMMERCE PLATFORM SEARCH FUNCTION ===
+Asymptotic Notation Analysis
+=====================================
+
+Total Products in Database: 10
+Sample Products:
+  Product{id=101, name='Laptop', price=999.99, quantity=15}
+  Product{id=102, name='Desktop Computer', price=1299.99, quantity=8}
+  Product{id=103, name='Smartphone', price=599.99, quantity=50}
+  Product{id=104, name='Tablet', price=399.99, quantity=25}
+  Product{id=105, name='Wireless Mouse', price=49.99, quantity=100}
+
+TEST 1: Linear Search by ID - O(n)
+-----------------------------------
+  Searching for Product ID: 103
+  Operations: 3
+  Result: Product{id=103, name='Smartphone', price=599.99, quantity=50}
+  Searching for Product ID: 999
+  Operations: 10
+  Result: Not Found
+
+TEST 2: Binary Search by ID - O(log n)
+--------------------------------------
+  Searching for Product ID: 103
+  Operations: 3
+  Result: Product{id=103, name='Smartphone', price=599.99, quantity=50}
+  Searching for Product ID: 999
+  Operations: 4
+  Result: Not Found
+
+TEST 3: Hash Table Search by ID - O(1)
+--------------------------------------
+  Searching for Product ID: 103
+  Operations: 1
+  Result: Product{id=103, name='Smartphone', price=599.99, quantity=50}
+  Searching for Product ID: 999
+  Operations: 1
+  Result: Not Found
+
+TEST 4: Linear Search by Name - O(n)
+------------------------------------
+  Searching for Name: 'Laptop'
+  Operations: 10
+  Results Found: 2
+    - Product{id=101, name='Laptop', price=999.99, quantity=15}
+    - Product{id=110, name='Laptop Stand', price=79.99, quantity=35}
+  Searching for Name: 'Phone'
+  Operations: 10
+  Results Found: 2
+    - Product{id=103, name='Smartphone', price=599.99, quantity=50}
+    - Product{id=108, name='Headphones', price=199.99, quantity=60}
+
+TEST 5: Price Range Search - O(n)
+--------------------------------
+  Price Range: $500.0 - $1500.0
+  Operations: 10
+  Products Found: 3
+    - Product{id=101, name='Laptop', price=999.99, quantity=15}
+    - Product{id=102, name='Desktop Computer', price=1299.99, quantity=8}
+    - Product{id=103, name='Smartphone', price=599.99, quantity=50}
+  Price Range: $50.0 - $300.0
+  Operations: 10
+  Products Found: 4
+    - Product{id=106, name='Mechanical Keyboard', price=129.99, quantity=40}
+    - Product{id=107, name='Monitor 27-inch', price=299.99, quantity=20}
+    - Product{id=108, name='Headphones', price=199.99, quantity=60}
+    - Product{id=110, name='Laptop Stand', price=79.99, quantity=35}
+
+ASYMPTOTIC NOTATION SUMMARY
+==========================
+1. Linear Search by ID:       O(n) - compares up to n elements
+2. Binary Search by ID:       O(log n) - divides search space by 2
+3. Hash Table Search by ID:   O(1) - direct access via hash map
+4. Linear Search by Name:     O(n) - checks all products
+5. Range Search:              O(n) - scans entire list
+
+PERFORMANCE COMPARISON (for n = 10):
+- Linear Search: up to 10 operations
+- Binary Search: up to 4 operations
+- Hash Table Search: 1 operation
+
+KEY TAKEAWAYS:
+✓ Choose appropriate data structures based on access patterns
+✓ Hash tables offer O(1) search for key-based lookups
+✓ Binary search requires sorted data but improves from O(n) to O(log n)
+✓ Understand trade-offs between space and time complexity

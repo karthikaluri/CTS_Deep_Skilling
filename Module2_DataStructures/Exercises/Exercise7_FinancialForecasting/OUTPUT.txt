@@ -1,0 +1,128 @@
+=== FINANCIAL FORECASTING WITH RECURSIVE ALGORITHMS ===
+Understanding Recursion in Financial Analysis
+================================================
+
+INPUT DATA:
+-----------
+Stock Prices (Past 10 Days): [100.50, 102.30, 101.80, 105.20, 107.50, 106.80, 108.90, 110.25, 109.75, 112.40]
+  Min: $100.50
+  Max: $112.40
+  Average: $106.54
+
+Cryptocurrency Prices (Past 10 Days): [45000.00, 46500.00, 47200.00, 48100.00, 49500.00, 51000.00, 52800.00, 54200.00, 56100.00, 58500.00]
+  Min: $45000.00
+  Max: $58500.00
+  Average: $50890.00
+
+TEST 1: Fibonacci Forecasting (Naive Recursion) - O(2^n)
+-------------------------------------------------------
+  Testing Fibonacci(15) with naive recursion:
+  Result: 610
+  Recursion Calls: 1973
+  Time: 0.1808 ms
+  Analysis: Very slow due to repeated calculations
+  - F(15) requires 1973 function calls
+  - Same values computed multiple times
+
+TEST 2: Fibonacci Forecasting (Memoized Recursion) - O(n)
+-------------------------------------------------------
+  Testing Fibonacci(15) with memoization:
+  Result: 610
+  Recursion Calls: 29
+  Time: 0.0081 ms
+  Analysis: Much faster with caching
+  - Each value computed only once
+  - Results cached for reuse
+  - Dramatic performance improvement
+
+TEST 3: Linear Forecasting (Trend-based) - O(n)
+-----------------------------------------------
+  Forecasting next 5 periods based on trend:
+  Last known value: $112.40
+  Forecast: $113.94 $115.48 $117.03 $118.57 $120.11 
+  Recursion calls: 16
+  Time complexity: O(n) where n = 5
+
+TEST 4: Exponential Forecasting (Growth-based) - O(n)
+----------------------------------------------------
+  Forecasting exponential growth (10% annual rate):
+  Last known value: $58500.00
+  Forecast (10% growth): $64350.00 $70785.00 $77863.50 $85649.85 $94214.84 
+  Recursion calls: 6
+  Formula: V * (1 + r)^t where r=0.10
+
+TEST 5: Statistical Analysis using Recursion
+--------------------------------------------
+  Recursive Sum calculation:
+  Sum: $1065.40
+  Recursion calls: 11
+  Time complexity: O(n)
+
+  Recursive Variance calculation:
+  Variance: 14.3689
+  Std Deviation: $3.79
+  Recursion calls: 11
+
+RECURSIVE ALGORITHM ANALYSIS
+============================
+1. Fibonacci (Naive):      O(2^n) - Exponential
+   - Base case: n <= 1
+   - Recursive case: f(n) = f(n-1) + f(n-2)
+   - Problem: Multiple redundant calculations
+
+2. Fibonacci (Memoized):   O(n) - Linear
+   - Same recursion with caching
+   - Eliminates redundant calculations
+   - Trade-off: Time for Space
+
+3. Linear Forecasting:     O(n) - Linear
+   - Recursive pattern: forecast[i] depends on previous value + trend
+   - Real-world: Trend analysis for financial markets
+
+4. Exponential Forecasting: O(n) - Linear
+   - Recursive pattern: forecast[i] = value * (1+rate)^i
+   - Models compound growth/interest
+
+5. Statistical Recursion: O(n) - Linear
+   - Sum: sum(i) = arr[i] + sum(i+1)
+   - Variance: accumulated squared differences
+
+RECURSIVE ALGORITHM PATTERNS
+============================
+Pattern 1: Base Case + Recursive Case
+  - Must have termination condition
+  - Each call reduces problem size
+
+Pattern 2: Divide and Conquer
+  - Split problem into smaller subproblems
+  - Solve recursively
+  - Combine results
+
+Pattern 3: Backtracking
+  - Explore all possibilities
+  - Undo choices (backtrack) when needed
+
+Pattern 4: Memoization (Dynamic Programming)
+  - Cache results of subproblems
+  - Avoid recalculating same values
+  - Transforms O(2^n) to O(n)
+
+COMPLEXITY COMPARISON TABLE
+===========================
+Algorithm                      Time            Space           Real-world Use 
+───────────────────────────────────────────────────────────────────────────
+Fibonacci (Naive)              O(2^n)          O(n)            None (avoid)   
+Fibonacci (Memoized)           O(n)            O(n)            Pattern analysis
+Linear Forecast                O(n)            O(n)            Trend prediction
+Exponential Forecast           O(n)            O(n)            Compound growth
+Recursive Sum                  O(n)            O(n)            Data aggregation
+
+RECURSION BEST PRACTICES
+========================
+1. Always define base case(s) to prevent infinite recursion
+2. Ensure recursive case makes progress toward base case
+3. Consider stack overflow for deep recursion (convert to iteration if needed)
+4. Use memoization to optimize repeated calculations
+5. Analyze time complexity carefully - recursion can be expensive
+6. Profile recursive algorithms before deployment
+7. Consider iterative alternatives for better performance
