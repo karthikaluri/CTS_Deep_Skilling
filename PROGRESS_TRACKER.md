@@ -41,7 +41,7 @@
 
 ## Module 2: Data Structures and Algorithms
 
-### Progress: 20% (Started)
+### Progress: 40% (6+ Exercises Complete)
 
 | # | Exercise/Topic | Status | Completion Date | Evidence |
 |---|---|---|---|---|
@@ -52,6 +52,31 @@
 | - | Time Complexity Analysis | ✅ IN PROGRESS | 2026-06-23 | Exercise 2 demonstrates Big O notation |
 | - | Recursive Algorithms | ✅ IN PROGRESS | 2026-06-23 | Exercise 7 demonstrates recursion patterns |
 | - | Module 2 Quiz | ⏳ PENDING | 2026-06-25 | - |
+
+---
+
+## Module 3: SQL and Database Fundamentals
+
+### Progress: 100% (6 Exercises Complete) ✅
+
+| # | Exercise/Topic | Status | Completion Date | Evidence |
+|---|---|---|---|---|
+| 1 | Ranking & Window Functions | ✅ COMPLETE | 2026-07-10 | 01_Setup_Tables.sql, 02_Ranking_Functions.sql, README.md |
+| 2 | Aggregation & Grouping Sets | ✅ COMPLETE | 2026-07-10 | Aggregation_Queries.sql, README.md |
+| 3 | CTEs & MERGE | ✅ COMPLETE | 2026-07-10 | CTEs_and_MERGE.sql, README.md |
+| 4 | PIVOT & UNPIVOT | ✅ COMPLETE | 2026-07-10 | Pivot_Unpivot_Queries.sql, README.md |
+| 5 | CTE Simplification | ✅ COMPLETE | 2026-07-10 | CTE_Query_Examples.sql, README.md |
+| 6 | Stored Procedures | ✅ COMPLETE | 2026-07-10 | Stored_Procedures.sql (11 procedures), README.md |
+
+**Module 3 Highlights:**
+- ✅ All 6 SQL exercises with comprehensive documentation
+- ✅ Window functions (ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, NTILE)
+- ✅ Advanced aggregation (GROUPING SETS, ROLLUP, CUBE)
+- ✅ CTEs including recursive examples (Calendar, Hierarchy)
+- ✅ Data transformation (PIVOT/UNPIVOT)
+- ✅ Customer analysis queries
+- ✅ 11 stored procedures with full error handling, transactions, and dynamic SQL
+- ✅ All files tested and ready for execution
 
 ---
 
