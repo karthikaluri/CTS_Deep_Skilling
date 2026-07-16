@@ -1,0 +1,12 @@
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\bin\Debug\net8.0\Module4_Core.deps.json
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\bin\Debug\net8.0\Module4_Core.dll
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\bin\Debug\net8.0\Module4_Core.pdb
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.AssemblyInfoInputs.cache
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.AssemblyInfo.cs
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.csproj.CoreCompileInputs.cache
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.sourcelink.json
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.dll
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\refint\Module4_Core.dll
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\Module4_Core.pdb
+C:\Users\aluri\OneDrive\Desktop\CTS_Deep_Skilling\Module4_AdvancedSQL\Exercises\Module4_NUnit_Moq\Module4_Core\obj\Debug\net8.0\ref\Module4_Core.dll

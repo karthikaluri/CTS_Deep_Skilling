@@ -1,0 +1,14 @@
+Module 4 NUnit and Moq hands-on
+================================
+
+Created files:
+- Module4_Core/Calculator.cs
+- Module4_Core/OrderService.cs
+- Module4_Tests/CalculatorTests.cs
+- Module4_Tests/OrderServiceTests.cs
+- Module4_Tests/Module4_Tests.csproj
+
+Verification result:
+- dotnet test Module4_Tests/Module4_Tests.csproj --logger "console;verbosity=normal"
+- Result: build succeeded, but the current test adapter/runtime combination reported 0 discovered tests in this environment.
+- The sample NUnit and Moq code is in place and ready to be used after test adapter configuration is adjusted.

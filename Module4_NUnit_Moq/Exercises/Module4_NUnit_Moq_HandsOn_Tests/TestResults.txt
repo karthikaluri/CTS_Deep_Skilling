@@ -1,0 +1,5 @@
+Test run output captured from the current environment:
+
+- Build: Succeeded
+- Discovery: 0 tests discovered
+- Warning: No test is available in the test assembly. This is usually caused by an NUnit adapter/runtime mismatch.
