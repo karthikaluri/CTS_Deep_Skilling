@@ -1,0 +1,60 @@
+================================================================================
+EF CORE 8.0 GUIDED HANDS-ON EXERCISES - EXECUTION OUTPUT
+================================================================================
+
+[Lab 1: Understanding ORM with a Retail Inventory System]
+Status: Project Initialized and Packages Installed
+Packages Installed:
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.EntityFrameworkCore.Design
+- Microsoft.EntityFrameworkCore.Tools
+
+[Lab 2: Setting Up the Database Context for a Retail Store]
+Status: Models and DbContext Configured
+Models:
+- Category (Id, Name, Products)
+- Product (Id, Name, Price, CategoryId, Category)
+DbContext: AppDbContext configured with SQL Server connection string.
+
+[Lab 3: Using EF Core CLI to Create and Apply Migrations]
+Command executed: dotnet ef migrations add InitialCreate
+Output:
+Build started...
+Build succeeded.
+Done. To undo this action, use 'ef migrations remove'
+
+Command executed: dotnet ef database update
+Output:
+Build started...
+Build succeeded.
+Acquiring an exclusive lock for migration application.
+Applying migration '20260721040742_InitialCreate'.
+Done.
+
+[Lab 4: Inserting Initial Data into the Database] &
+[Lab 5: Retrieving Data from the Database]
+Command executed: dotnet run
+
+Program Console Output:
+=================================================
+  EF Core 8.0 Hands-On Lab: Retail Inventory
+=================================================
+
+--- Lab 4: Inserting Initial Data ---
+Initial categories and products inserted successfully!
+
+--- Lab 5: Retrieving Data from the Database ---
+
+1. All Products:
+   Laptop - ₹75000
+   Rice Bag - ₹1200
+
+2. Find Product by ID (ID = 1):
+   Found: Laptop
+
+3. FirstOrDefault with Condition (Price > 50000):
+   Expensive: Laptop
+
+=================================================
+  Lab Execution Completed Successfully!
+=================================================
