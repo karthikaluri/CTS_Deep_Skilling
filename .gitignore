@@ -11,5 +11,7 @@
 
 # Build folders
 bin/
+obj/
 out/
 target/
+
