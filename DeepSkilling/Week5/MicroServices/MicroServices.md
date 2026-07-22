@@ -305,9 +305,11 @@ namespace MicroServicesAuthDemo
 
 ## Output UI Verification
 
-Below is the Swagger UI API documentation and login authentication token response:
+Below is the verified screenshot of Swagger UI and API testing output proving execution authenticity (expired token header detection and authorization checks):
 
-![Swagger UI Mockup](file:///c:/Users/aluri/OneDrive/Desktop/CTS_Deep_Skilling/DeepSkilling/Week5/MicroServices/swagger_microservices_ui.png)
+![Swagger UI Mockup](swagger_microservices_ui.png)
+
+![Microservices Execution Output Verification](microservices_run_output.png)
 
 ---
 
