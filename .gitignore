@@ -7,6 +7,7 @@
 
 # IDE files
 .vscode/
+.vs/
 *.iml
 
 # Build folders
