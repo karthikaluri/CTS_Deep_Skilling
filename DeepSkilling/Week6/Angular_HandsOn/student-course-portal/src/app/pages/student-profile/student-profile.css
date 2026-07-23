@@ -1,0 +1,157 @@
+.profile-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  color: #e0e0e0;
+}
+
+.profile-header {
+  margin-bottom: 2rem;
+}
+
+.profile-header h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #888888;
+  font-size: 1rem;
+}
+
+.profile-details-card {
+  display: flex;
+  gap: 2rem;
+  background-color: #252526;
+  border: 1px solid #2d2d2d;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #007acc;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 122, 204, 0.4);
+}
+
+.details-info h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.email {
+  color: #aaaaaa;
+  margin: 0 0 1rem 0;
+}
+
+.metrics-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.gpa-badge, .enrolled-badge {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.gpa-badge {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.enrolled-badge {
+  background-color: rgba(0, 122, 204, 0.15);
+  color: #007acc;
+  border: 1px solid #007acc;
+}
+
+.enrolled-list-section h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #2d2d2d;
+  padding-bottom: 0.75rem;
+}
+
+.enrolled-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enrolled-course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #252526;
+  border: 1px solid #2d2d2d;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+
+.enrolled-course-item:hover {
+  border-color: #007acc;
+}
+
+.course-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.course-code {
+  font-size: 0.8rem;
+  color: #007acc;
+  font-family: monospace;
+}
+
+.credits-badge {
+  font-size: 0.85rem;
+  background-color: #333333;
+  color: #aaaaaa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.empty-enrolled-state {
+  background-color: #252526;
+  border: 1px dashed #444444;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.empty-enrolled-state p {
+  color: #888888;
+  margin: 0;
+}
+
+.empty-enrolled-state a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.empty-enrolled-state a:hover {
+  text-decoration: underline;
+}

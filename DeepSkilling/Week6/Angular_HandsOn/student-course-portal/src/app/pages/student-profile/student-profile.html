@@ -1,0 +1,40 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h2>Student Profile</h2>
+    <p class="subtitle">Manage your credentials, metrics, and enrolled modules.</p>
+  </div>
+
+  <section class="profile-details-card">
+    <div class="avatar-placeholder">AM</div>
+    <div class="details-info">
+      <h3>{{ studentName }}</h3>
+      <p class="email">{{ studentEmail }}</p>
+      <div class="metrics-row">
+        <span class="gpa-badge">GPA: {{ gpa }}</span>
+        <span class="enrolled-badge">Enrolled: {{ (enrolledCourses$ | async)?.length || 0 }} Courses</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="enrolled-list-section">
+    <h3>Your Enrolled Courses</h3>
+    
+    <div *ngIf="enrolledCourses$ | async as enrolledCourses">
+      <div *ngIf="enrolledCourses.length > 0; else noEnrolled" class="enrolled-grid">
+        <div *ngFor="let course of enrolledCourses" class="enrolled-course-item">
+          <div class="course-info">
+            <h4>{{ course.name }}</h4>
+            <span class="course-code">{{ course.code }}</span>
+          </div>
+          <span class="credits-badge">{{ course.credits }} Credits</span>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noEnrolled>
+      <div class="empty-enrolled-state">
+        <p>You are not currently enrolled in any courses. Go to the <a href="/courses">Courses Directory</a> to search and add classes.</p>
+      </div>
+    </ng-template>
+  </section>
+</div>

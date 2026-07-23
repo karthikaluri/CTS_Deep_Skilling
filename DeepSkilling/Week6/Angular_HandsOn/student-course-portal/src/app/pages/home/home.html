@@ -1,0 +1,61 @@
+<div class="home-container">
+  <header class="home-header">
+    <h1>Welcome to {{ portalName }}</h1>
+    <p class="subtitle">Your ultimate gateway to register, manage, and track your college courses in one unified place.</p>
+  </header>
+
+  <!-- Explanation comment on binding differences -->
+  <!-- 
+    Binding Differences Explanation:
+    - [property] (One-way binding, Component -> DOM): Binds component data to HTML element properties (e.g., [disabled]). Changes in the component update the DOM, but user interactions on the DOM do not update the component.
+    - [(ngModel)] (Two-way binding, Component <=> DOM): Combines property binding and event binding. Changes in the component update the input value, and user typing updates the component's searchTerm field dynamically in real-time.
+  -->
+
+  <section class="stats-section">
+    <div class="stat-card">
+      <h3>Courses Available</h3>
+      <p class="stat-value">{{ coursesCount }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Enrolled Courses</h3>
+      <!-- Dummy count from enrolled courses -->
+      <p class="stat-value">3</p>
+    </div>
+    <div class="stat-card">
+      <h3>Cumulative GPA</h3>
+      <p class="stat-value gpa">3.8</p>
+    </div>
+  </section>
+
+  <section class="actions-section">
+    <div class="enroll-action">
+      <button class="btn btn-primary" [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+      <p *ngIf="message" class="enroll-message">{{ message }}</p>
+    </div>
+
+    <div class="search-action">
+      <label for="search">Find a Course:</label>
+      <input id="search" type="text" [(ngModel)]="searchTerm" placeholder="Search by course name or code...">
+      <p *ngIf="searchTerm" class="search-preview">Searching for: <strong>{{ searchTerm }}</strong></p>
+    </div>
+  </section>
+
+  <!-- DI Demo section adding widgets to display singleton vs scoped services -->
+  <section class="di-demo-section">
+    <h3>Dependency Injection Demonstrations</h3>
+    <div class="widgets-grid">
+      <!-- CourseSummaryWidget shares singleton CourseService -->
+      <div class="widget-col">
+        <app-course-summary-widget></app-course-summary-widget>
+      </div>
+
+      <!-- Scoped notification providers demo -->
+      <div class="widget-col">
+        <div class="notifications-wrapper">
+          <app-notification [widgetTitle]="'Notification Scope A'"></app-notification>
+          <app-notification [widgetTitle]="'Notification Scope B'"></app-notification>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

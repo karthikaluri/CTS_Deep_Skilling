@@ -1,0 +1,19 @@
+<div class="notification-box">
+  <h4>{{ widgetTitle }}</h4>
+  <p class="explanation-note">Component-level provider: isolated instance state.</p>
+
+  <ul class="notification-list">
+    <li *ngFor="let note of notificationService.getNotifications()" class="note-item">
+      {{ note }}
+    </li>
+  </ul>
+
+  <div class="input-row">
+    <input 
+      type="text" 
+      [(ngModel)]="newMessage" 
+      placeholder="Type a notification message..." 
+      (keyup.enter)="sendNotification()">
+    <button (click)="sendNotification()">Post</button>
+  </div>
+</div>

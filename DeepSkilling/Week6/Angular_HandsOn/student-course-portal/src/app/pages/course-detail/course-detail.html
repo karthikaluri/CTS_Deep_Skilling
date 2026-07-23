@@ -1,0 +1,35 @@
+<div class="detail-container">
+  <div *ngIf="course; else notFound" class="course-detail-card">
+    <div class="detail-header">
+      <h2>{{ course.name }}</h2>
+      <span class="course-code">{{ course.code }}</span>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-item">
+        <span class="label">Course Status:</span>
+        <span class="value uppercase">{{ course.gradeStatus }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Weight / Value:</span>
+        <span class="value">{{ course.credits | creditLabel }}</span>
+      </div>
+      <div class="detail-item description-block">
+        <span class="label">Course Description:</span>
+        <p class="desc-text">This course is a core requirement in the software engineering curriculum. Students will study advanced theoretical paradigms, design systems, and practical framework implementation standards.</p>
+      </div>
+    </div>
+
+    <div class="detail-actions">
+      <a routerLink="/courses" class="btn btn-secondary">← Back to Courses</a>
+    </div>
+  </div>
+
+  <ng-template #notFound>
+    <div class="not-found-card">
+      <h3>Course Not Found</h3>
+      <p>The requested course identifier does not map to any active listing.</p>
+      <a routerLink="/courses" class="btn btn-primary">Back to Courses</a>
+    </div>
+  </ng-template>
+</div>

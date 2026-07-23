@@ -1,0 +1,9 @@
+<div *ngIf="loadingService.isLoading$ | async" class="global-loading-spinner">
+  <div class="loader"></div>
+  <p>Processing request...</p>
+</div>
+
+<app-header></app-header>
+<main class="app-main-content">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,157 @@
+.course-card {
+  background-color: #252526;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Conditionally applied classes */
+.course-card.card--enrolled {
+  background-color: rgba(76, 175, 80, 0.05);
+  border-color: #4caf50;
+}
+
+.course-card.card--full {
+  background-color: rgba(244, 67, 54, 0.03);
+  border-right: 4px solid #f44336;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.course-code {
+  font-size: 0.8rem;
+  background-color: #333333;
+  color: #007acc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.card-body {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.credits-value {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Badges styling */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badge-passed {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.badge-failed {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.badge-pending {
+  background-color: #7a7a7a;
+  color: #ffffff;
+}
+
+.badge-unknown {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+/* Expanded state styling */
+.expanded-details {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #333333;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.details-text {
+  font-style: italic;
+  line-height: 1.4;
+  color: #888888;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.card-actions .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  flex: 1;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary {
+  background-color: #3e3e42;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #4d4d52;
+}
+
+.btn-enroll {
+  background-color: #007acc;
+  color: #ffffff;
+}
+
+.btn-enroll:hover {
+  background-color: #0062a3;
+}
+
+.btn-unenroll {
+  background-color: #d84315;
+  color: #ffffff;
+}
+
+.btn-unenroll:hover {
+  background-color: #bf360c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

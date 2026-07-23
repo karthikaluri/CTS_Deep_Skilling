@@ -1,0 +1,60 @@
+================================================================================
+WEEK 6 ANGULAR HANDS-ON 1 - TASK 1 FILE EXPLORATION & PURPOSE
+================================================================================
+
+Below is the description of the purpose of each generated core Angular project file:
+
+1. angular.json
+   - Purpose: Workspace-wide configuration file for the Angular CLI. It specifies project structure settings, builder tools, build targets (build, serve, test), styles/scripts lists, and asset configuration parameters.
+
+2. tsconfig.json
+   - Purpose: Root TypeScript compiler configuration for the workspace. It specifies global compiler options such as compiler target (e.g. ES2022), module systems (e.g. ESNext), path aliases, and decorator configurations.
+
+3. tsconfig.app.json
+   - Purpose: Application-specific TypeScript compiler configuration. It inherits from the global tsconfig.json and specifies module options, main entry source file paths, and rules specific to building the web application.
+
+4. package.json
+   - Purpose: Node Package Manager (NPM) configuration. It manages third-party libraries, workspace metadata, and build script definitions (such as 'ng build', 'ng serve', and 'ng test').
+
+5. src/main.ts
+   - Purpose: Main application entry point that bootstraps the root component (or module) into the browser DOM using Angular's standalone application bootstrapping API.
+
+6. src/app/app.config.ts
+   - Purpose: Application configuration file that provides modular services, routes, animations, and dependency injection providers globally to the standalone application.
+
+7. src/app/app.component.ts (app.ts)
+   - Purpose: Root component logic of the application. It acts as the shell of the application UI and binds the main template and stylesheet.
+
+8. src/index.html
+   - Purpose: The main physical HTML entry page. It serves as the container shell that contains the <app-root> selector, which Angular replaces with the bootstrapped application content dynamically.
+
+--------------------------------------------------------------------------------
+BUDGETS CONFIGURATION UNDER architect > build > configurations > production:
+--------------------------------------------------------------------------------
+"budgets": [
+  {
+    "type": "initial",
+    "maximumWarning": "500kB",
+    "maximumError": "1MB"
+  },
+  {
+    "type": "anyComponentStyle",
+    "maximumWarning": "4kB",
+    "maximumError": "8kB"
+  }
+]
+
+What these budgets control:
+- Budgets restrict build output file size to prevent bloat and maintain performance:
+  1. "initial": Limits the overall size of the initial bundle load files (e.g. main scripts and styles) required to render the landing page.
+     - maximumWarning (500kB): Triggers a build warning if the initial bundle exceeds 500kB.
+     - maximumError (1MB): Fails the build if the bundle size exceeds 1MB.
+  2. "anyComponentStyle": Limits the stylesheet size for any individual component.
+     - maximumWarning (4kB): Generates a warning if any component's style rules exceed 4kB.
+     - maximumError (8kB): Fails the build if a component's style sheet exceeds 8kB.
+
+--------------------------------------------------------------------------------
+COMPILED APPLICATION CODE FILE IDENTIFIED IN DIST/
+--------------------------------------------------------------------------------
+- File Name: main-*.js (e.g., main-NLVHSGWP.js) contains the compiled Angular application logic.
+- Output Directory: DeepSkilling/Week6/Angular_HandsOn/student-course-portal/dist/student-course-portal/

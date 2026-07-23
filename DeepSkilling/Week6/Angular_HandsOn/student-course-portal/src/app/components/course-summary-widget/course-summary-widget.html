@@ -1,0 +1,8 @@
+<div class="summary-widget">
+  <h4>Course Summary Widget</h4>
+  <p class="description">Singleton check: injects CourseService.</p>
+  <div class="metrics">
+    Total Courses Count: <strong class="badge-count">{{ (courses$ | async)?.length || 0 }}</strong>
+  </div>
+  <button class="btn btn-add" (click)="addSampleCourse()">+ Add Course (Test Singleton Sync)</button>
+</div>
