@@ -1,0 +1,102 @@
+================================================================================
+WEEK 7 GIT HANDS-ON LAB 3: GIT_HOL LOG
+================================================================================
+
+This document explains Git branching, merging, and GitLab operations, and logs the step-by-step commands and verification outputs.
+
+--------------------------------------------------------------------------------
+PART 1: CONCEPTS & DEFINITIONS
+--------------------------------------------------------------------------------
+
+1. Branching:
+   - Purpose: Creates a parallel workspace path (isolated environment) in a repository. Developers can work on new features, experiment, or fix bugs without impacting the master (stable) branch.
+   - Default Pointer: The current active branch is marked with an asterisk (*) under the "git branch" listing.
+
+2. Merging:
+   - Purpose: Integrates the commits and histories of a source branch (e.g., GitNewBranch) into a target branch (e.g., master).
+   - Fast-Forward Merging: Occurs when the target branch has no new commits since the source branch split off. Git simply moves the target branch pointer forward.
+
+3. GitLab Branch Request:
+   - Purpose: Represents a request or direct creation of a new branch on the remote server (GitLab UI) linked to a specific issue card or ticket.
+
+4. GitLab Merge Request (MR):
+   - Purpose: A formal request to merge the source feature branch into the target master branch. It provides a web interface to review code changes, run automated CI/CD pipeline tests, resolve merge conflicts visually, leave comments, and obtain approvals from maintainers before integration.
+
+--------------------------------------------------------------------------------
+PART 2: COMMAND LOGS & OUTPUTS
+--------------------------------------------------------------------------------
+
+1. Initialized repository and made initial commit on master:
+   Command: git init
+   Output: Initialized empty Git repository.
+   Command: echo "Welcome to Git Branching!" > welcome.txt
+   Command: git add welcome.txt
+   Command: git commit -m "feat: initial commit on master"
+   Output: [master (root-commit) de16234] feat: initial commit on master
+
+2. Created a new branch "GitNewBranch":
+   Command: git branch GitNewBranch
+
+3. Checked branch list:
+   Command: git branch
+   Output:
+     GitNewBranch
+   * master
+
+4. Switched to new branch:
+   Command: git checkout GitNewBranch
+   Output: Switched to branch 'GitNewBranch'
+
+5. Created "feature.txt" inside GitNewBranch and committed:
+   Command: echo "This content is from GitNewBranch feature branch" > feature.txt
+   Command: git add feature.txt
+   Command: git commit -m "feat: implement feature in GitNewBranch"
+   Output: [GitNewBranch b0b2661] feat: implement feature in GitNewBranch
+
+6. Switched back to master:
+   Command: git checkout master
+   Output: Switched to branch 'master'
+
+7. Difference list between trunk and branch:
+   Command: git diff master..GitNewBranch
+   Output:
+   diff --git a/feature.txt b/feature.txt
+   new file mode 100644
+   index 0000000..64a4868
+   --- /dev/null
+   +++ b/feature.txt
+   @@ -0,0 +1 @@
+   +This content is from GitNewBranch feature branch
+
+8. Visual Diff Configuration (P4Merge):
+   Command: git config --local merge.tool p4merge
+   Command: git config --local mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+
+9. Merged GitNewBranch into master branch:
+   Command: git merge GitNewBranch
+   Output:
+   Updating de16234..b0b2661
+   Fast-forward
+    feature.txt | 1 +
+    1 file changed, 1 insertion(+)
+    create mode 100644 feature.txt
+
+10. Checked git graph log tree history:
+    Command: git log --oneline --graph --decorate
+    Output:
+    * b0b2661 (HEAD -> master) feat: implement feature in GitNewBranch
+    * de16234 feat: initial commit on master
+
+11. Deleted the feature branch:
+    Command: git branch -d GitNewBranch
+    Output: Deleted branch GitNewBranch (was b0b2661).
+
+12. Final status check:
+    Command: git status
+    Output:
+    On branch master
+    nothing to commit, working tree clean
+
+================================================================================
+END OF LOG
+================================================================================
