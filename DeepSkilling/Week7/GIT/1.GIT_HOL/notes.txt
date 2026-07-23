@@ -1,0 +1,98 @@
+================================================================================
+WEEK 7 GIT HANDS-ON LAB 1: GIT_HOL LOG
+================================================================================
+
+This document logs the step-by-step commands and verification outputs for the Git configuration, Notepad++ integration, and repository operations.
+
+--------------------------------------------------------------------------------
+STEP 1: GIT CLIENT VERIFICATION & USER CONFIGURATION
+--------------------------------------------------------------------------------
+
+1. Checked Git version to verify correct client installation:
+   Command: git --version
+   Output:
+   git version 2.45.2.windows.1
+
+2. Configured user configuration parameters locally in the repository:
+   Command: git config user.name "GitDemo User"
+   Command: git config user.email "gitdemo@example.com"
+
+3. Listed configurations to verify correct parameters:
+   Command: git config --list --local
+   Output:
+   core.repositoryformatversion=0
+   core.filemode=false
+   core.bare=false
+   core.logallrefupdates=true
+   core.symlinks=false
+   core.ignorecase=true
+   user.name=GitDemo User
+   user.email=gitdemo@example.com
+
+--------------------------------------------------------------------------------
+STEP 2: DEFAULT EDITOR INTEGRATION (NOTEPAD++)
+--------------------------------------------------------------------------------
+
+1. Configured core.editor parameter to target notepad++.exe with parameters:
+   Command: git config core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+
+2. Verified local configuration:
+   Command: git config core.editor
+   Output:
+   'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+
+3. Path Variable Integration:
+   - Added "C:\Program Files\Notepad++" to System Environment Variables.
+   - Checked alias operation.
+
+--------------------------------------------------------------------------------
+STEP 3: SOURCE REPOSITORY OPERATIONS & ACTIONS
+--------------------------------------------------------------------------------
+
+1. Initialized a local repository "GitDemo":
+   Command: git init
+   Output:
+   Initialized empty Git repository in C:/Users/aluri/OneDrive/Desktop/CTS_Deep_Skilling/DeepSkilling/Week7/GIT/1.GIT_HOL/GitDemo/.git/
+
+2. Verified hidden directories:
+   Command: ls -a
+   Output:
+   .
+   ..
+   .git
+
+3. Created "welcome.txt" with initial content: "Welcome to Git Hands-On Lab!"
+   Command: echo "Welcome to Git Hands-On Lab!" > welcome.txt
+
+4. Checked repository tracking status:
+   Command: git status
+   Output:
+   On branch master
+   No commits yet
+   Untracked files:
+     (use "git add <file>..." to include in what will be committed)
+           welcome.txt
+   nothing added to commit but untracked files present (use "git add" to track)
+
+5. Tracked file under staging area:
+   Command: git add welcome.txt
+
+6. Committed the staged file to local repository:
+   Command: git commit -m "feat: add welcome.txt welcome message"
+   Output:
+   [master (root-commit) 6705653] feat: add welcome.txt welcome message
+    1 file changed, 1 insertion(+)
+    create mode 100644 welcome.txt
+
+7. Verified commit logs:
+   Command: git log
+   Output:
+   commit 6705653b8b8a58dd33e2872f7b5c8580cac4f5e2
+   Author: GitDemo User <gitdemo@example.com>
+   Date:   Thu Jul 23 15:40:54 2026 +0530
+
+       feat: add welcome.txt welcome message
+
+================================================================================
+END OF LOG
+================================================================================
